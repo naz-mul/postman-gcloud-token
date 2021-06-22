@@ -1,0 +1,17 @@
+{
+  "name": "token",
+  "version": "1.0.0",
+  "description": "gcloud token generator",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "Naz Alam",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 14 < 15"
+  },
+  "dependencies": {
+    "express": "4.17.1"
+  }
+}
