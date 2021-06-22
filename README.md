@@ -42,15 +42,13 @@ Create a new API Request in Postman, then select `Pre-request Script`. Copy and 
 
 ```javascript
 pm.sendRequest('http://127.0.0.1:7778/token', (err, response) => {
-	console.log(response.text());
+    console.log(response.text());
     pm.variables.set("BEARER_TOKEN", response.text());
 })
 ```
 ![Setting bearer token](./images/script.png)
 
 
-Finally, prepare the header to use bearer token.
-
-> {{BEARER_TOKEN}}
+Finally, prepare the header to use bearer token by selecting the `Authorization` tab from the API Request tab in Postman, choose `Bearer Token` for Type and `{{BEARER_TOKEN}}` for Token.
 
 ![Setting bearer token](./images/token.png)
