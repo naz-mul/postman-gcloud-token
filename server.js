@@ -4,7 +4,7 @@ const express = require('express');
 const http = require('http'), { exec } = require('child_process');
 
 // Constants
-const PORT = 7778;
+const PORT = 80;
 const HOST = '0.0.0.0';
 
 const app = express();
