@@ -41,10 +41,10 @@ gcloud auth login
 Create a new API Request in Postman, then select `Pre-request Script`. Copy and paste this snippet in the textbox. 
 
 ```javascript
-    pm.sendRequest('http://127.0.0.1:7778', (err, response) => {
-	    console.log(response.text());
-	    pm.variables.set("BEARER_TOKEN", response.text());
-    })
+pm.sendRequest('http://127.0.0.1:7778/token', (err, response) => {
+	console.log(response.text());
+    pm.variables.set("BEARER_TOKEN", response.text());
+})
 ```
 ![Setting bearer token](./images/script.png)
 
