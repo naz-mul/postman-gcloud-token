@@ -22,7 +22,7 @@ These applications and command line tools need to be installed.
 
 # Set up the server
 
-Step 1: Run this command to create the container called `gcloud-token` which will run on port `7778` and will be automatically restarted. Specifying the host explicitly will prevent anyone on your network from pull your tokens.
+Step 1: Run this command to create the container called `gcloud-token` which will run on port `7778` and will be automatically restarted. *(Specifying the host explicitly will prevent anyone on your network from pulling your tokens.)*
 ```bash
 docker run --name=gcloud-token --restart=always -p 127.0.0.1:7778:80 -d nalam/postman-gcloud-token
 ```
