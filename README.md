@@ -7,7 +7,7 @@ As a back-end developer I spend a lot of my time working with APIs from many dif
 
 My recent development time has involved working with Google APIs. Google APIs require authentication which essentially boils down to you providing a bearer token. These bearer tokens are short lived and tend to require frequent regeneration. As you can imagine, this gets tedious fairly quickly when sending API requests to your endpoint.
 
-To make my life a slightly less cumbersome, and perhaps also people who might use this tool, I have decided to create this project. 
+To make my life slightly less cumbersome, I have decided to create this project.
   
 
 # Pre-requisites
@@ -22,9 +22,9 @@ These applications and command line tools need to be installed.
 
 # Set up the server
 
-Step 1: Run this command to create the container called `gcloud-token` which will run on port `7778` and will be automatically restarted.
+Step 1: Run this command to create the container called `gcloud-token` which will run on port `7778` and will be automatically restarted. Specifying the host explicitly will prevent anyone on your network from pull your tokens.
 ```bash
-docker run --name=gcloud-token --restart=always -p 7778:80 -d nalam/postman-gcloud-token
+docker run --name=gcloud-token --restart=always -p 127.0.0.1:7778:80 -d nalam/postman-gcloud-token
 ```
 
 Step 2: Go inside the container so you can login to Google Cloud with your credentials.
