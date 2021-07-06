@@ -54,7 +54,7 @@ gcloud auth login
 ```javascript
 pm.globals.set("BEARER_TOKEN", responseBody);
 ```
-4. Click `Send` to populate the global `Bearer Token` and start using it from any requests that specifies `Authorization` Type as `Bearer Token` and `Token` as the global variable `{{BEARER_TOKEN}}`
+4. Click `Send` to populate the global `Bearer Token` and start using it from any requests that specifies `Bearer Token` as `Authorization` Type and `{{BEARER_TOKEN}}` as `Token`.
 
 ![Setting bearer token](./images/token.png)
 
@@ -68,14 +68,15 @@ pm.globals.set("BEARER_TOKEN", responseBody);
 
 ![Set environment variable](./images/env-var.png)
 
-3. Select the environment you have just created from the top-right corner, and follow steps 1, 2 and 3 as above.
+3. Select the environment you have just created from the top-right corner, and follow steps 1, 2 and 3 from [the steps as outlined here](#configure-as-a-global-environment-variable).
+
 4. Instead of passing the globals in the `Tests` script, pass the snippet below:
 
 ```javascript
 pm.environment.set("BEARER_TOKEN", responseBody);
 ```
 
-5. Click `Send` to populate the `Bearer Token` and start using it for your environment from any requests that specifies `Authorization` Type as `Bearer Token` and `Token` as the environment variable `{{BEARER_TOKEN}}`
+5. Click `Send` to populate the `Bearer Token` and start using it for any requests in the environment that specifies `Bearer Token` as `Authorization` Type and `{{BEARER_TOKEN}}` as `Token`.
 
 
 ## Configure as per request variable
