@@ -38,6 +38,19 @@ gcloud auth login
 ```
 
 # Configuring Postman to use a pre-request script
+## Configure as a global environment variable
+1. Create a new collection e.g. `Token`
+![Setting bearer token](./images/collection.png)
+2. Add a new request to that collection.
+![Setting bearer token](./images/request.png)
+3. Now set the url and the test script.
+![Setting bearer token](./images/test-script.png)
+```javascript
+pm.globals.set("BEARER_TOKEN", responseBody);
+```
+4. Click `Send` to start using it
+
+## Configure as per request variable
 Create a new API Request in Postman, then select `Pre-request Script`. Copy and paste this snippet in the textbox. 
 
 ```javascript
